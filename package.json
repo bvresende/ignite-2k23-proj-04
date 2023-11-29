@@ -1,0 +1,22 @@
+{
+  "name": "ignite-2k23-proj-04",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.2",
+    "vite-tsconfig-paths": "^4.2.1",
+    "vitest": "^0.34.6"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.10"
+  }
+}

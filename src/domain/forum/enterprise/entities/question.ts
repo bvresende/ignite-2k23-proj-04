@@ -1,5 +1,5 @@
+import { AggregateRoot } from '@/core/entities/aggregate-root'
 import { Slug } from './value-objects/slug'
-import { Entity } from '@/core/entities/entity'
 import { type UniqueEntityID } from '@/core/entities/unique-entity-id'
 import { type Optional } from '@/core/types/optional'
 import dayjs from 'dayjs'
@@ -14,7 +14,7 @@ export interface QuestionProps {
   updatedAt?: Date
 }
 
-export class Question extends Entity<QuestionProps> {
+export class Question extends AggregateRoot<QuestionProps> {
   get authorId (): UniqueEntityID {
     return this.props.authorId
   }
@@ -82,7 +82,7 @@ export class Question extends Entity<QuestionProps> {
     const question = new Question({
       ...props,
       slug: props.slug ?? Slug.createFromText(props.title),
-      createdAt: new Date()
+      createdAt: props.createdAt ?? new Date()
     }, id)
 
     return question

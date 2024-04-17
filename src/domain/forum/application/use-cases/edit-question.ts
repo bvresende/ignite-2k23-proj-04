@@ -1,4 +1,4 @@
-import { left, type Either, right } from '@/core/entities/either'
+import { left, type Either, right } from '@/core/either'
 import { type Question } from '../../enterprise/entities/question'
 import { type QuestionsRepository } from '../repositories/question-repository'
 import { ResourceNotFoundError } from './errors/resource-not-found-error'
@@ -57,9 +57,9 @@ export class EditQuestionUseCase {
 
     questionAttachmentList.update(questionAttachments)
 
+    question.attachments = questionAttachmentList
     question.title = title
     question.content = content
-    question.attachments = questionAttachmentList
 
     await this.questionsRepository.save(question)
 

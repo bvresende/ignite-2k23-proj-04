@@ -1,4 +1,4 @@
-import { left, type Either, right } from '@/core/entities/either'
+import { left, type Either, right } from '@/core/either'
 import { type AnswersRepository } from '../repositories/answer-repository'
 import { ResourceNotFoundError } from './errors/resource-not-found-error'
 import { NotAllowedError } from './errors/not-allowed-error'

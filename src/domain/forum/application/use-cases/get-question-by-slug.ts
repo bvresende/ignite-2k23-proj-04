@@ -1,6 +1,6 @@
 import { type QuestionsRepository } from '../repositories/question-repository'
 import { type Question } from '../../enterprise/entities/question'
-import { type Either, left, right } from '@/core/entities/either'
+import { type Either, left, right } from '@/core/either'
 import { ResourceNotFoundError } from './errors/resource-not-found-error'
 import { type NotAllowedError } from './errors/not-allowed-error'
 
